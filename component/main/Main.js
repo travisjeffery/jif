@@ -48,7 +48,7 @@ var List = React.createClass({
     });
     return (
       <section id="photos">
-      {list}
+        {list}
       </section>
     );
   }

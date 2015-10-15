@@ -60,7 +60,7 @@ app.on('ready', function() {
 				click: function() {
 					app.quit();
 				}
-			}, ]
+			},]
 		}, {
 			label: 'Edit',
 			submenu: [{
@@ -89,7 +89,7 @@ app.on('ready', function() {
 				label: 'Select All',
 				accelerator: 'Command+A',
 				selector: 'selectAll:'
-			}, ]
+			},]
 		}, {
 			label: 'View',
 			submenu: [{
@@ -110,7 +110,7 @@ app.on('ready', function() {
 				click: function() {
 					mainWindow.toggleDevTools();
 				}
-			}, ]
+			},]
 		}, {
 			label: 'Window',
 			submenu: [{
@@ -126,7 +126,7 @@ app.on('ready', function() {
 			}, {
 				label: 'Bring All to Front',
 				selector: 'arrangeInFront:'
-			}, ]
+			},]
 		}, {
 			label: 'Help',
 			submenu: [{
@@ -166,7 +166,7 @@ app.on('ready', function() {
 				click: function() {
 					mainWindow.close();
 				}
-			}, ]
+			},]
 		}, {
 			label: '&View',
 			submenu: [{
@@ -187,7 +187,7 @@ app.on('ready', function() {
 				click: function() {
 					mainWindow.toggleDevTools();
 				}
-			}, ]
+			},]
 		}, {
 			label: 'Help',
 			submenu: [{
