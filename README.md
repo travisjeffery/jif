@@ -1,8 +1,10 @@
 # jif
 
-An electron app to search for gifs. Primarily a playground for using React.
+An electron app to search for gifs.
 
-![](https://cldup.com/BF3vxYIgrC.thumb.png)
+Primarily a playground for using React. Infinite scroll and shows images in collage.
+
+![](https://cldup.com/iYESG5fTW4.thumb.png)
 
 ## Install
 
