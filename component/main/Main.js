@@ -5,6 +5,7 @@ var EventEmitter = require('events').EventEmitter;
 var ee = new EventEmitter();
 var giphy = require('giphy-api')('dc6zaTOxFJmzC');
 var MasonryMixin = require('react-masonry-mixin')(React);
+var _ = require('underscore');
 
 var SearchInput = React.createClass({
   getInitialState: function() {
@@ -45,13 +46,15 @@ var List = React.createClass({
     self.limit = 100;
     self.offset = 0;
 
-    window.addEventListener('scroll', function() {
+    function scrollToBottom() {
       var isAtBottom = document.body.scrollTop + window.innerHeight === document.body.scrollHeight;
       if (isAtBottom && !self.isUpdating) {
         self.offset = self.offset + self.limit;
         ee.emit('search');
       }
-    });
+    }
+
+    window.addEventListener('scroll', _.throttle(scrollToBottom, 500, false));
 
     ee.on('search', function(query) {
       if (self.isUpdating) return;
